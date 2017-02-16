@@ -8,7 +8,7 @@ function sum(currentState, action){
            switch(action.type){            
             case 'SUM':
               nextState = parseInt(action.a) + parseInt(action.b);
-              this.funcWithError();
+              //this.funcWithError();
               return nextState;
             break;
 
