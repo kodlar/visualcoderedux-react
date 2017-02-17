@@ -46,8 +46,8 @@ function render(){
                         $('#user_choices').empty();
                         for(i = 0; i < state.links.links.length; i++)
                         {
-                                                let listItem = state.links.links[i];
-                                                $('#user_choices').append("<li><a href=\""+listItem.url+"\" target=\"_blank\">"+ listItem.todo+"</a></li>");
+                              let listItem = state.links.links[i];
+                              $('#user_choices').append("<li><a href=\""+listItem.url+"\" target=\"_blank\">"+ listItem.todo+"</a></li>");
                         }
                 }
                 
@@ -65,10 +65,10 @@ render();
 
 store.dispatch(getShowcaseNews);
 store.dispatch(getUserChoices);
-setInterval(() => { 
-        console.log('burdayım tekrar');
-        store.dispatch(getUserChoices);
-},5000);
+// setInterval(() => { 
+//         console.log('burdayım tekrar');
+//         store.dispatch(getUserChoices);
+// },5000);
 
 //Events
  document.getElementById('hbrBtn').addEventListener('click', function(){           
