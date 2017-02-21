@@ -1,0 +1,9 @@
+React dersleri
+0- Component olarak es6'ya göre bir sýnýf oluþturup o sýnýfý react kütüphanesindeki Component nesnesinden türetmemiz gerekir.
+1- ReactDom.render(component alýr, componenti basacaðý html elementi)
+2- Component içindeki render fonksiyonu return kýsmýnda <div></div> elemeti içine istediði kadar element eklenebilir
+3- return içindeki söz dizimi jsx dosyalarýn aittir. Buradaki söz dizimine düzenlemek için jsx'e ait kurallarý bilmek gerekir.
+4- mesela divdeki textlerin rengini kýrmýzý yapmak istersek style={{color:"red"}} bir javascript nesnesi atamak gerekir. jsx javascript ile html söz diziminin bileþiminden ibarettir.
+5- Eðer render içinde ilgili component'e atanmýþ bir baþka fonksiyonu çaðýracaksýnýz, mutlaka this. keywordünü kullanmanýz gerekir. Burada this. component fonksiyonunu iþaret eder.
+
+5.derste kaldým
