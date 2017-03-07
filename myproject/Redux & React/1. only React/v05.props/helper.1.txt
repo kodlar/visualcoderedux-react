@@ -1,0 +1,29 @@
+React dersleri
+0- Component olarak es6'ya göre bir sýnýf oluþturup o sýnýfý react kütüphanesindeki Component nesnesinden türetmemiz gerekir.
+
+1- ReactDom.render(component alýr, componenti basacaðý html elementi)
+
+2- Component içindeki render fonksiyonu return kýsmýnda <div></div> elemeti içine istediði kadar element eklenebilir
+
+3- return içindeki söz dizimi jsx dosyalarýn aittir. Buradaki söz dizimine düzenlemek için jsx'e ait kurallarý bilmek gerekir.
+
+4- Mesela divdeki textlerin rengini kýrmýzý yapmak istersek style={{color:"red"}} bir javascript nesnesi atamak gerekir. jsx javascript ile html söz diziminin bileþiminden ibarettir.
+
+5- Eðer render içinde ilgili component'e atanmýþ bir baþka fonksiyonu çaðýracaksýnýz, mutlaka this. keywordünü kullanmanýz gerekir. Burada this. component fonksiyonunu iþaret eder.
+
+6- Projede babel ES6+JSX söz diziminin ES5 haline getiriyor. Webpack ise kodda yapýlan deðiþikliði tarayýcýyý güncellemeden otomatik kendisi güncelleyerek ekrana yansýtýr.
+
+7- Render içinde yazýlan fonks. çaðýrmak için return kýsmýnda this keywordüne gerek yok.
+
+8- React özelliði olan state ile redux'taki state ayný olgu deðildir.
+
+9- React render fonk içinde elementlerde id attribute kullanýlmaz.
+
+10- jsx içinde input value deðerleri týrnak kullanmadan {} içinde ifade edilir.
+
+11- jsx içinde eventler camelcase olmalý aksi halde çalýþmaz fonk ismine() eklersen fonksiyon hemen çalýþýyor. o yüzden fonk event tetiklendiðinde çalýþmasý için düz fonk. ismi yazýlýr
+
+12- Child component oluþturmak için ilgili componentin render bölümünden ilgili state ve fonksiyonlar yeni component sýnýfýndan türetilmiþ yeni sýnýfa eklenir. Ýlgili fonksiyonlar yine bu sýnýfýn render methodunda çaðýrýlýr. Oluþturduðumuz bu sýnýfý parent sýnýfýn render metodu içinde çaðýrdýðýmýzda child component olarak adlandýrýlýr.
+
+
+
