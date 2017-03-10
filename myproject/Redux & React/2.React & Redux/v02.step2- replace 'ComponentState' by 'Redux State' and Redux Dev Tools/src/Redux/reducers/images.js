@@ -4,10 +4,10 @@ export default function images(state = { data: [], loading :"Please click the 'R
 switch(action.type){
     
     case 'IMAGES':
-    return Object.assign({}, state, { data: action.data, loading : 'loaded'});
+    return Object.assign({}, state, { data: action.data, loading : 'yüklendi!'});
 
     case 'IMAGELOADING_TEXT':
-     return Object.assign({}, state, { loading : 'loading...'});
+     return Object.assign({}, state, { loading : 'yükleniyor...'});
     default:
     
     return state;

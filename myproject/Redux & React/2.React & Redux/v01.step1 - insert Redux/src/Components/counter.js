@@ -10,8 +10,7 @@ constructor(props){
 
 
 decrease = () => {
-   this.setState({ count: this.state.count - 1 })
-   this.props.updateDescribe('click "Decrease" button')
+   this.setState({ count: this.state.count - 1 })   
 }
 
 render(){
