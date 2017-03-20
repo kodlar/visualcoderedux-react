@@ -45,7 +45,8 @@ import { getRandomImages } from '../Redux/actions/index'
 
 const RandomImagesContainer = connect(
    (state, ownProps) => ({images: state.images}), 
-   {onRandomImages : getRandomImages}
+   {onRandomImages : () => getRandomImages}
    )(RandomImages)
 
+ 
 export default RandomImagesContainer
