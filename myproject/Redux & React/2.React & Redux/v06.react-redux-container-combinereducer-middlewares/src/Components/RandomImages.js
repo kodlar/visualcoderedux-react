@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 
-class RandomImages extends Component{
+export class RandomImages extends Component{
 
 // componentWillMount(){
 //   console.log("test")
@@ -39,14 +39,3 @@ class RandomImages extends Component{
             )
         }
 
-import { connect} from 'react-redux'
-import { getRandomImages } from '../Redux/actions/index'
-
-
-const RandomImagesContainer = connect(
-   (state, ownProps) => ({images: state.images}), 
-   {onRandomImages : () => getRandomImages}
-   )(RandomImages)
-
- 
-export default RandomImagesContainer

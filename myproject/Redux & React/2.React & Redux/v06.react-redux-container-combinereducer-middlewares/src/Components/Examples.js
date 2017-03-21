@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import Counter from './Counter'
-import Sum from './Sum'
-import RandomImages from './RandomImages'
+import Counter from '../Containers/Counter'
+import Sum from '../Containers/Sum'
+import RandomImages from '../Containers/RandomImages'
 
 export default class Examples extends Component{
 
