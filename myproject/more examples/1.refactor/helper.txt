@@ -1,0 +1,34 @@
+React dersleri
+0- Component olarak es6'ya göre bir sýnýf oluþturup o sýnýfý react kütüphanesindeki Component nesnesinden türetmemiz gerekir.
+
+1- ReactDom.render(component alýr, componenti basacaðý html elementi)
+
+2- Component içindeki render fonksiyonu return kýsmýnda <div></div> elemeti içine istediði kadar element eklenebilir
+
+3- return içindeki söz dizimi jsx dosyalarýn aittir. Buradaki söz dizimine düzenlemek için jsx'e ait kurallarý bilmek gerekir.
+
+4- Mesela divdeki textlerin rengini kýrmýzý yapmak istersek style={{color:"red"}} bir javascript nesnesi atamak gerekir. jsx javascript ile html söz diziminin bileþiminden ibarettir.
+
+5- Eðer render içinde ilgili component'e atanmýþ bir baþka fonksiyonu çaðýracaksýnýz, mutlaka this. keywordünü kullanmanýz gerekir. Burada this. component fonksiyonunu iþaret eder.
+
+6- Projede babel ES6+JSX söz diziminin ES5 haline getiriyor. Webpack ise kodda yapýlan deðiþikliði tarayýcýyý güncellemeden otomatik kendisi güncelleyerek ekrana yansýtýr.
+
+7- Render içinde yazýlan fonks. çaðýrmak için return kýsmýnda this keywordüne gerek yok.
+
+8- React özelliði olan state ile redux'taki state ayný olgu deðildir.
+
+9- React render fonk içinde elementlerde id attribute kullanýlmaz.
+
+10- jsx içinde input value deðerleri týrnak kullanmadan {} içinde ifade edilir.
+
+11- jsx içinde eventler camelcase olmalý aksi halde çalýþmaz fonk ismine() eklersen fonksiyon hemen çalýþýyor. o yüzden fonk event tetiklendiðinde çalýþmasý için düz fonk. ismi yazýlýr
+
+12- Child component oluþturmak için ilgili componentin render bölümünden ilgili state ve fonksiyonlar yeni component sýnýfýndan türetilmiþ yeni sýnýfa eklenir. Ýlgili fonksiyonlar yine bu sýnýfýn render methodunda çaðýrýlýr. Oluþturduðumuz bu sýnýfý parent sýnýfýn render metodu içinde çaðýrdýðýmýzda child component olarak adlandýrýlýr.
+
+13- Props react'in özelliklerinden biridir. Ýki farklý component arasýnda veri taþýnýrken, farklý fonksiyonlar çaðýrýlarak çalýþtýrýlýr. Ana component üzerinde ilgili state ve fonksiyon oluþturularak constructor'da bind edilir. Daha sonra bu fonksiyon ve state ilgili ana component üzerindeki child componentlere bir attribute vasýtasý ile yönlendirilir. Child componentlerde yapacaklarý iþlemi state objesi yerine props nesnesi üzerinden alýrlar. Propslar child componente parametre vasýtasýyla data taþýmak için kullanýlýr, bu sayede modüler bir yapý elde edilir
+
+14- Componentler sadece class  bazlý olmaz, fonksiyon bazlýda olabilir, mesela stateless(api servisi) fonksiyon yazýmýnda, fonksiyon bazlý component render metodu içinde tanýmlanýp return fonksiyonu içinde bu fonksiyon çaðýrýlabilir. React state objesi sadece class bazlý nesnelerde kullanýlabilir. Jsx yazýmda array örneði { [ element1, element2]} þeklinde olur. Dolayýsýyla Array.prototype.map() özelliði nesne.map() yazýmý kullanýlabilir. Eðer fonksiyon bazlý component item parametre olarak props alýrsa kod daha esnek bir hale gelir. Böylece fonksiyon her hangi bir yerden çaðýrýlabilir.
+
+15- React ile redux arasýnda karþýlaþtýrma yaparsak state nesnesini initialize etmek için react'ta constructor içine redux'ta ilgili fonksiyonun(subreducer) birinci parametresi olarak set ediyoruz. State nesnesini update etmek için react'ta ilgili fonksiyon içine this.setState() fonks. çaðýrýyoruz, redux'ta store.dispatch metodunu kullanarak ilgili reducer fonk. içindeki action tipine göre nesnenin özelliðini  güncelliyoruz. Eðer State nesnesi içinden ilgili deðerleri okumak istersek react'ta this.state.propertyname þeklinde çaðýrýyoruz. Redux'ta ise store.getState() metodu ile iliþkili nesnenin özelliðini (store.getState().propertyname) çaðýrýyoruz.
+
+
