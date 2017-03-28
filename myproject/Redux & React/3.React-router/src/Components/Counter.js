@@ -10,6 +10,7 @@ const {count:{result}, onDecrement} = this.props;
     return(
     <div>
         Clicked: <span>{ result }</span> times
+       { this.props.children }
         <button onClick={ onDecrement }> Decrease </button>
          <p />
     </div>

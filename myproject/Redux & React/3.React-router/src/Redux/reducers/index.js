@@ -2,6 +2,7 @@ import counter from './counter'
 import sum from './sum'
 import images from './images'
 import {combineReducers} from 'redux'
+import { routerReducer } from 'react-router-redux'
 /*
       // step 2.2 //bu fonksiyon reducer bu işlemde bu isimde root reducer olur 
   export default function combineReducer(currentState, action){
@@ -22,5 +23,6 @@ import {combineReducers} from 'redux'
 export default  combineReducers({
       count:counter,
       sum,
-      images
+      images,
+      routing: routerReducer
 })
